@@ -59,8 +59,8 @@ form input, form select, form textarea { padding:10px; font-size:1em; width:100%
 form button { padding:12px; font-size:1em; background:#0a1f44; color:#fff; border:none; border-radius:5px; cursor:pointer; }
 .boton-whatsapp { display:inline-block; background:#25d366; color:white; font-weight:bold; padding:12px 25px; border-radius:8px; text-decoration:none; font-size:1.1em; margin:20px auto 0; text-align:center; transition:0.3s; }
 .boton-whatsapp:hover { background:#1ebe5c; }
-footer { background:#0a1f44; color:#fff; text-align:center; padding:20px; font-family:'Great Vibes', cursive; font-size:1.2em; }
-footer a { color:#f0d36c; font-weight:bold; font-size:1.1em; }
+footer { background:#0a1f44; color:#fff; text-align:center; padding:20px; font-family:'Great Vibes', cursive; }
+.footer-logo { max-width: 200px; height: auto; display: block; margin: 10px auto; }
 </style>
 </head>
 <body>
@@ -99,7 +99,10 @@ footer a { color:#f0d36c; font-weight:bold; font-size:1.1em; }
     <button type="submit">Enviar</button>
   </form>
 </section>
-<footer><p>Del barrio de Boedo para el mundo</p><p><a href="https://www.instagram.com/fedearte/" target="_blank">@fedearte</a></p></footer>
+<footer>
+  <p style="font-size: 1.5em">Del barrio de Boedo para el mundo</p>
+  <img src="https://res.cloudinary.com/dcqfopg66/image/upload/q_auto,f_auto/v1784116618/1784116603798_rtjs4t.png" alt="Logo" class="footer-logo">
+</footer>
 <script>
 document.getElementById("form-contacto").addEventListener("submit", function(event) {
   event.preventDefault();
