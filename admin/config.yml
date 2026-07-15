@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: xxfedeartexx/portfolio-fedearte
+  name: git-gateway
   branch: main
 
 media_library:
