@@ -1,88 +1,18 @@
 backend:
   name: git-gateway
   branch: main
-
 media_library:
   name: cloudinary
   config:
     cloud_name: "dcqfopg66"
     api_key: "912384568221237"
-
 collections:
   - name: "galerias"
     label: "Administrar Galerías"
     files:
-      - label: "Obras a la venta"
-        name: "ventas"
-        file: "ventas.json"
-        fields:
-          - name: "obras"
-            label: "Obras"
-            widget: "list"
-            fields:
-              - {label: "Posición (Ej: 1, 2... dejar vacío para el final)", name: "orden", widget: "number", value_type: "int", required: false}
-              - {label: "Título", name: "titulo", widget: "string"}
-              - {label: "Descripción", name: "descripcion", widget: "text"}
-              - {label: "Precio", name: "precio", widget: "string"}
-              - {label: "Foto", name: "thumb", widget: "image"}
-              - {label: "Foto Ampliada", name: "full", widget: "image"}
-
-      - label: "Galería Madera"
-        name: "madera"
-        file: "madera1.json"
-        fields:
-          - name: "imagenes"
-            label: "Imágenes"
-            widget: "list"
-            fields:
-              - {label: "Posición (Ej: 1, 2...)", name: "orden", widget: "number", value_type: "int", required: false}
-              - {label: "Foto Miniatura", name: "thumb", widget: "image"}
-              - {label: "Foto Ampliada", name: "full", widget: "image"}
-          
-      - label: "Galería Chapa"
-        name: "chapa"
-        file: "chapa1.json"
-        fields:
-          - name: "imagenes"
-            label: "Imágenes"
-            widget: "list"
-            fields:
-              - {label: "Posición (Ej: 1, 2...)", name: "orden", widget: "number", value_type: "int", required: false}
-              - {label: "Foto Miniatura", name: "thumb", widget: "image"}
-              - {label: "Foto Ampliada", name: "full", widget: "image"}
-          
-      - label: "Galería Vidrio"
-        name: "vidrio"
-        file: "vidrio1.json"
-        fields:
-          - name: "imagenes"
-            label: "Imágenes"
-            widget: "list"
-            fields:
-              - {label: "Posición (Ej: 1, 2...)", name: "orden", widget: "number", value_type: "int", required: false}
-              - {label: "Foto Miniatura", name: "thumb", widget: "image"}
-              - {label: "Foto Ampliada", name: "full", widget: "image"}
-
-      - label: "Galería Pared"
-        name: "pared"
-        file: "pared1.json"
-        fields:
-          - name: "imagenes"
-            label: "Imágenes"
-            widget: "list"
-            fields:
-              - {label: "Posición (Ej: 1, 2...)", name: "orden", widget: "number", value_type: "int", required: false}
-              - {label: "Foto Miniatura", name: "thumb", widget: "image"}
-              - {label: "Foto Ampliada", name: "full", widget: "image"}
-
-      - label: "Otras Yerbas"
-        name: "yerbas"
-        file: "yerbas1.json"
-        fields:
-          - name: "imagenes"
-            label: "Imágenes"
-            widget: "list"
-            fields:
-              - {label: "Posición (Ej: 1, 2...)", name: "orden", widget: "number", value_type: "int", required: false}
-              - {label: "Foto Miniatura", name: "thumb", widget: "image"}
-              - {label: "Foto Ampliada", name: "full", widget: "image"}
+      - {label: "Obras a la venta", name: "ventas", file: "ventas.json", fields: [{name: "obras", label: "Obras", widget: "list", fields: [{label: "Posición", name: "orden", widget: "number", value_type: "int", required: false}, {label: "Título", name: "titulo", widget: "string"}, {label: "Precio", name: "precio", widget: "string"}, {label: "Foto", name: "thumb", widget: "image"}, {label: "Foto Ampliada", name: "full", widget: "image"}]}]}
+      - {label: "Madera", name: "madera", file: "madera1.json", fields: [{name: "imagenes", label: "Imágenes", widget: "list", fields: [{label: "Posición", name: "orden", widget: "number", value_type: "int", required: false}, {label: "Foto", name: "thumb", widget: "image"}, {label: "Foto Ampliada", name: "full", widget: "image"}]}]}
+      - {label: "Chapa", name: "chapa", file: "chapa1.json", fields: [{name: "imagenes", label: "Imágenes", widget: "list", fields: [{label: "Posición", name: "orden", widget: "number", value_type: "int", required: false}, {label: "Foto", name: "thumb", widget: "image"}, {label: "Foto Ampliada", name: "full", widget: "image"}]}]}
+      - {label: "Vidrio", name: "vidrio", file: "vidrio1.json", fields: [{name: "imagenes", label: "Imágenes", widget: "list", fields: [{label: "Posición", name: "orden", widget: "number", value_type: "int", required: false}, {label: "Foto", name: "thumb", widget: "image"}, {label: "Foto Ampliada", name: "full", widget: "image"}]}]}
+      - {label: "Pared", name: "pared", file: "pared1.json", fields: [{name: "imagenes", label: "Imágenes", widget: "list", fields: [{label: "Posición", name: "orden", widget: "number", value_type: "int", required: false}, {label: "Foto", name: "thumb", widget: "image"}, {label: "Foto Ampliada", name: "full", widget: "image"}]}]}
+      - {label: "Otras Yerbas", name: "yerbas", file: "yerbas1.json", fields: [{name: "imagenes", label: "Imágenes", widget: "list", fields: [{label: "Posición", name: "orden", widget: "number", value_type: "int", required: false}, {label: "Foto", name: "thumb", widget: "image"}, {label: "Foto Ampliada", name: "full", widget: "image"}]}]}
