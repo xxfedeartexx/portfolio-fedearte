@@ -3,7 +3,7 @@
     {
       "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1759962156/Screenshot_20230322-225511_xcc6hp.jpg",
       "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1759962156/Screenshot_20230322-225511_xcc6hp.jpg",
-      "orden": 1
+      "orden": 2
     },
     {
       "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1759979397/IMG-20250418-WA0054_q71ztj.jpg",
@@ -19,7 +19,8 @@
     },
     {
       "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1759986479/468391745_931192398441637_7321360711186093180_n.webp_wsuqj5.jpg",
-      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1759986479/468391745_931192398441637_7321360711186093180_n.webp_wsuqj5.jpg"
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1759986479/468391745_931192398441637_7321360711186093180_n.webp_wsuqj5.jpg",
+      "orden": 1
     },
     {
       "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1760385644/InShot_20251013_165923038_eh1qri.jpg",
@@ -80,7 +81,7 @@
     {
       "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/v1784089282/IMG_2419_rv7tvw.jpg",
       "full": "https://res.cloudinary.com/dcqfopg66/image/upload/v1784089282/IMG_2419_rv7tvw.jpg",
-      "orden": 2
+      "orden": 3
     }
   ]
 }
