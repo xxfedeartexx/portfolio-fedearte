@@ -1,11 +1,14 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: xxfedeartexx/portfolio-fedearte
   branch: main
+
 media_library:
   name: cloudinary
   config:
     cloud_name: "dcqfopg66"
     api_key: "912384568221237"
+
 collections:
   - name: "galerias"
     label: "Administrar Galerías"
