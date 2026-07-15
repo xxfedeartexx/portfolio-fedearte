@@ -4,13 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fe de Arte - Fileteado Porteño y Cartelería</title>
-
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playwright+Deutschland+Grundschrift+Guides&display=swap" rel="stylesheet">
-
 <style>
 body { margin:0; font-family: 'Roboto', sans-serif; overflow-x:hidden; }
 h1 { font-family: 'Great Vibes', cursive; margin:0; }
@@ -58,194 +55,72 @@ footer a { color:#f0d36c; font-weight:bold; font-size:1.1em; }
 </style>
 </head>
 <body>
-<header>
-  <h1>Fe de Arte</h1>
-  <h2>Fileteado porteño y Cartelería</h2>
-</header>
-
+<header><h1>Fe de Arte</h1><h2>Fileteado porteño y Cartelería</h2></header>
 <nav id="mini-menu">
   <a href="#mis-trabajos">Mis Trabajos</a>
   <a href="#obras-venta">Obras a la venta</a>
   <a href="#contacto">Contacto</a>
 </nav>
-
-<section class="intro">
-  <p>Cartelería pintada a mano, letras a pincel y filetes sobre cualquier superficie. Identidad tradicional a través de un arte popular con mas de 100 años en las calles de Buenos Aires y el mundo.</p>
-</section>
-
+<section class="intro"><p>Cartelería pintada a mano, letras a pincel y filetes sobre cualquier superficie.</p></section>
 <section class="bloque-trabajos" id="mis-trabajos">
   <h2 style="font-size:3.0em">Mis Trabajos</h2>
-  <div class="categoria" id="madera">
-    <h3>Madera</h3><div class="galeria"></div>
-    <button class="boton-cotizar" onclick="scrollToContact()">Cotizá tu idea</button>
-  </div>
-  <div class="categoria" id="chapa">
-    <h3>Chapa</h3><div class="galeria"></div>
-    <button class="boton-cotizar" onclick="scrollToContact()">Cotizá tu idea</button>
-  </div>
-  <div class="categoria" id="vidrio">
-    <h3>Vidrio</h3><div class="galeria"></div>
-    <button class="boton-cotizar" onclick="scrollToContact()">Cotizá tu idea</button>
-  </div>
-  <div class="categoria" id="pared">
-    <h3>Pared</h3><div class="galeria"></div>
-    <button class="boton-cotizar" onclick="scrollToContact()">Cotizá tu idea</button>
-  </div>
-  <div class="categoria" id="yerbas">
-    <h3>Otras Yerbas</h3><div class="galeria"></div>
-    <button class="boton-cotizar" onclick="scrollToContact()">Cotizá tu idea</button>
-  </div>
+  <div class="categoria" id="madera"><h3>Madera</h3><div class="galeria"></div></div>
+  <div class="categoria" id="chapa"><h3>Chapa</h3><div class="galeria"></div></div>
+  <div class="categoria" id="vidrio"><h3>Vidrio</h3><div class="galeria"></div></div>
+  <div class="categoria" id="pared"><h3>Pared</h3><div class="galeria"></div></div>
+  <div class="categoria" id="yerbas"><h3>Otras Yerbas</h3><div class="galeria"></div></div>
 </section>
-
 <section class="bloque-ventas" id="obras-venta">
   <h2>Obras a la venta</h2>
-  <p class="subtitulo">Envios a todo el 🌎</p>
   <div class="galeria-ventas"></div>
 </section>
-
-<div id="lightbox" onclick="this.style.display='none'">
-  <img src="" alt="Ampliación">
-</div>
-
+<div id="lightbox" onclick="this.style.display='none'"><img src="" alt="Ampliación"></div>
 <section class="bloque-contacto" id="contacto">
   <h2 style="font-size:3.5em">Contacto</h2>
-  <form name="contacto" method="POST" data-netlify="true">
+  <form id="form-contacto" name="contacto" method="POST" data-netlify="true">
     <input type="hidden" name="form-name" value="contacto">
     <input type="text" name="nombre" placeholder="Nombre*" required>
     <input type="text" name="email" placeholder="Email o celular*" required>
-    <select name="soporte">
-      <option value="">Tipo de soporte</option>
-      <option>Chapa</option><option>Vidrio</option><option>Madera</option><option>Pared</option><option>Otras Yerbas</option>
-    </select>
-    <div class="dos-campos">
-      <input type="number" name="ancho" placeholder="Ancho (cm)">
-      <input type="number" name="alto" placeholder="Alto (cm)">
-    </div>
+    <select name="soporte"><option value="">Tipo de soporte</option><option>Chapa</option><option>Vidrio</option><option>Madera</option><option>Pared</option><option>Otras Yerbas</option></select>
+    <div class="dos-campos"><input type="number" name="ancho" placeholder="Ancho (cm)"><input type="number" name="alto" placeholder="Alto (cm)"></div>
     <textarea name="idea" placeholder="Resumen de la idea"></textarea>
     <button type="submit">Enviar</button>
   </form>
-  <div style="text-align:center;">
-    <a href="https://wa.me/5547991760068" target="_blank" class="boton-whatsapp">O consultá por WhatsApp</a>
-  </div>
 </section>
-
-<footer>
-  <p style="font-size: 1.5em">Del barrio de Boedo para el mundo</p>
-  <p style="font-size: 2em"><a href="https://www.instagram.com/fedearte/" target="_blank">@fedearte</a></p>
-</footer>
-
+<footer><p>Del barrio de Boedo para el mundo</p><p><a href="https://www.instagram.com/fedearte/" target="_blank">@fedearte</a></p></footer>
 <script>
-function scrollToContact() { document.getElementById("contacto").scrollIntoView({ behavior: "smooth" }); }
-
-(function(){
-  const userLang = navigator.language || navigator.userLanguage;
-  if(userLang.startsWith('pt')){
-    document.querySelector('html').lang = 'pt';
-    document.querySelector('header h2').textContent = "Fileteado porteño e Cartelaria";
-    document.querySelector('.intro p').textContent = "Cartelaria pintada à mão, letras a pincel e filetes sobre qualquer superfície. Identidade tradicional através de uma arte popular com mais de 100 anos nas ruas de Buenos Aires e do mundo.";
-    document.querySelector('#mini-menu a[href="#mis-trabajos"]').textContent = "Meus Trabalhos";
-    document.querySelector('#mini-menu a[href="#obras-venta"]').textContent = "Obras à venda";
-    document.querySelector('#mini-menu a[href="#contacto"]').textContent = "Contato";
-    document.querySelector('#madera h3').textContent = "Madeira";
-    document.querySelector('#chapa h3').textContent = "Chapa";
-    document.querySelector('#vidrio h3').textContent = "Vidro";
-    document.querySelector('#pared h3').textContent = "Parede";
-    document.querySelector('#yerbas h3').textContent = "Outras Ervas";
-    document.querySelector('#obras-venta .subtitulo').textContent = "Envios para todo o 🌎";
-    document.querySelector('#contacto h2').textContent = "Contato";
-    document.querySelector('form [name="soporte"] option[value=""]').textContent = "Tipo de suporte";
-    const opciones = ['Chapa','Vidro','Madeira','Parede','Outras Ervas'];
-    document.querySelectorAll('form [name="soporte"] option:not([value=""])').forEach((opt,i)=>{opt.textContent=opciones[i];});
-    document.querySelector('form [name="nombre"]').placeholder = "Nome*";
-    document.querySelector('form [name="email"]').placeholder = "Email ou celular*";
-    document.querySelector('form [name="ancho"]').placeholder = "Largura (cm)";
-    document.querySelector('form [name="alto"]').placeholder = "Altura (cm)";
-    document.querySelector('form [name="idea"]').placeholder = "Resumo da ideia";
-    document.querySelector('form button').textContent = "Enviar";
-    document.querySelector('.boton-whatsapp').textContent = "Ou consulte pelo WhatsApp";
-  }
-})();
-
-async function cargarCategoria(nombreJson, categoriaId = null) {
-  const categoria = categoriaId || nombreJson.replace('1','');
+document.getElementById("form-contacto").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams(formData).toString() })
+  .then(() => { alert("¡Mensaje enviado!"); event.target.reset(); })
+  .catch(() => alert("Error al enviar."));
+});
+async function cargarData(nombreJson, contenedorId, esVenta = false) {
   try {
     const res = await fetch(`${nombreJson}.json`);
     const data = await res.json();
-    const galeria = document.querySelector(`#${categoria} .galeria`);
+    const items = (esVenta ? data.obras : data.imagenes) || [];
+    items.sort((a, b) => (Number(a.orden||999) - Number(b.orden||999)));
+    const galeria = document.querySelector(esVenta ? '.galeria-ventas' : `#${contenedorId} .galeria`);
     galeria.innerHTML = '';
-    
-    // Acá está la magia para que ordene por el número que le pusiste
-    let imagenesOrdenadas = data.imagenes || [];
-    imagenesOrdenadas.sort((a, b) => {
-      let posA = a.orden !== undefined && a.orden !== null && a.orden !== "" ? Number(a.orden) : 999;
-      let posB = b.orden !== undefined && b.orden !== null && b.orden !== "" ? Number(b.orden) : 999;
-      return posA - posB;
-    });
-
-    imagenesOrdenadas.forEach(imgObj => {
-      const img = document.createElement('img');
-      img.src = imgObj.thumb;
-      img.alt = categoria;
-      img.addEventListener('click', () => {
-        const lb = document.querySelector('#lightbox');
-        lb.querySelector('img').src = imgObj.full;
-        lb.style.display = 'flex';
-      });
-      galeria.appendChild(img);
+    items.forEach(item => {
+      const div = document.createElement('div');
+      if(esVenta) {
+        div.className = 'venta-item';
+        div.innerHTML = `<img src="${item.thumb}" onclick="document.querySelector('#lightbox img').src='${item.full}'; document.querySelector('#lightbox').style.display='flex';"><div class="info"><p>${item.titulo}</p><p class="precio">💰 ${item.precio}</p></div>`;
+      } else {
+        const img = document.createElement('img'); img.src = item.thumb;
+        img.onclick = () => { document.querySelector('#lightbox img').src = item.full; document.querySelector('#lightbox').style.display='flex'; };
+        div.appendChild(img);
+      }
+      galeria.appendChild(div);
     });
   } catch(e){}
 }
-['madera1','chapa1','vidrio1','pared1','yerbas1'].forEach(nombre => cargarCategoria(nombre));
-
-async function cargarVentas(){
-  try {
-    const res = await fetch(`ventas.json`);
-    const data = await res.json();
-    const galeria = document.querySelector('.galeria-ventas');
-    galeria.innerHTML = '';
-    
-    let obrasOrdenadas = data.obras || [];
-    obrasOrdenadas.sort((a, b) => {
-      let posA = a.orden !== undefined && a.orden !== null && a.orden !== "" ? Number(a.orden) : 999;
-      let posB = b.orden !== undefined && b.orden !== null && b.orden !== "" ? Number(b.orden) : 999;
-      return posA - posB;
-    });
-
-    obrasOrdenadas.forEach(obra => {
-      const item = document.createElement('div');
-      item.className = 'venta-item';
-      const mensajeWhats = encodeURIComponent(`Hola! Me interesó el *${obra.titulo}*, quiero saber métodos de pago y envío.`);
-      const img = document.createElement('img');
-      img.src = obra.thumb;
-      img.alt = obra.titulo;
-      img.addEventListener('click', (e)=>{
-        e.stopPropagation();
-        const lb = document.querySelector('#lightbox');
-        lb.querySelector('img').src = obra.full;
-        lb.style.display='flex';
-      });
-      item.appendChild(img);
-      const info = document.createElement('div');
-      info.className = 'info';
-      info.innerHTML = `<p>${obra.titulo}</p><p><b>Fileteado porteño</b> sobre:<br>${obra.descripcion}</p><p class="precio">💰 ${obra.precio}</p>`;
-      const boton = document.createElement('a');
-      boton.href = `https://wa.me/5547991760068?text=${mensajeWhats}`;
-      boton.target = "_blank"; boton.className = "boton-cotizar"; boton.textContent = "Comprar";
-      info.appendChild(boton); item.appendChild(info); galeria.appendChild(item);
-    });
-  } catch(e){}
-}
-cargarVentas();
-
-if (window.netlifyIdentity) {
-  window.netlifyIdentity.on("init", user => {
-    if (!user) {
-      window.netlifyIdentity.on("login", () => {
-        document.location.href = "/admin/";
-      });
-    }
-  });
-}
+['madera1','chapa1','vidrio1','pared1','yerbas1'].forEach((n,i) => cargarData(n, n.replace('1','')));
+cargarData('ventas', '', true);
+if (window.netlifyIdentity) { window.netlifyIdentity.on("init", user => { if (!user) window.netlifyIdentity.on("login", () => document.location.href = "/admin/"); }); }
 </script>
 </body>
 </html>
