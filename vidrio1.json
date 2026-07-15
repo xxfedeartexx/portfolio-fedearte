@@ -42,7 +42,8 @@
     },
     {
       "full": "https://res.cloudinary.com/dcqfopg66/image/upload/v1784085315/IMG_2356_klmnpw.jpg",
-      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/v1784085315/IMG_2356_klmnpw.jpg"
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/v1784085315/IMG_2356_klmnpw.jpg",
+      "orden": 1
     }
   ]
 }
