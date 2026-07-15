@@ -16,8 +16,17 @@ h3 { font-family: 'Playwright Deutschland Grundschrift Guides', cursive; margin:
 a { color: inherit; text-decoration:none; }
 nav#mini-menu, .galeria-ventas .info p, form input, form select, form textarea, form button { font-family: 'Roboto', sans-serif; }
 header { background:#fff9e6; padding:40px 20px; text-align:center; }
-header h1 { font-size:3.5em; }
-header h2 { font-size:1.0em; margin-top:5px; color:#333; font-family:'Roboto', sans-serif; }
+.logo-header { 
+    max-width: 90%; 
+    width: 450px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto;
+    image-rendering: -webkit-optimize-contrast; 
+    image-rendering: crisp-edges;
+    margin-bottom: 20px;
+}
+header h2 { font-size:1.2em; margin-top:5px; color:#333; font-family:'Roboto', sans-serif; }
 nav#mini-menu { display:flex; justify-content:center; background:#fff; border-top:3px solid #d4a017; border-bottom:3px solid #d4a017; padding:10px 40px; gap:40px; }
 nav#mini-menu a { font-weight:bold; }
 .intro { background:#800000; color:#fff; padding:40px 20px; text-align:center; }
@@ -55,13 +64,16 @@ footer a { color:#f0d36c; font-weight:bold; font-size:1.1em; }
 </style>
 </head>
 <body>
-<header><h1>Fe de Arte</h1><h2>Fileteado porteño y cartelería</h2></header>
+<header>
+  <img src="https://res.cloudinary.com/dcqfopg66/image/upload/q_auto,f_auto/v1784115823/1784115775454_qmcqmu.png" alt="Fe de Arte" class="logo-header">
+  <h2>Fileteado porteño y Cartelería</h2>
+</header>
 <nav id="mini-menu">
   <a href="#mis-trabajos">Mis Trabajos</a>
-  <a href="#obras-venta">Obras a pedido</a>
+  <a href="#obras-venta">Obras a la venta</a>
   <a href="#contacto">Contacto</a>
 </nav>
-<section class="intro"><p>Cartelería pintada a mano, letras a pincel y filetes sobre cualquier superficie. Identidad tradicional a través de un arte popular con mas de 100 años en las calles de Buenos Aires y el mundo. </p></section>
+<section class="intro"><p>Cartelería pintada a mano, letras a pincel y filetes sobre cualquier superficie.</p></section>
 <section class="bloque-trabajos" id="mis-trabajos">
   <h2 style="font-size:3.0em">Mis Trabajos</h2>
   <div class="categoria" id="madera"><h3>Madera</h3><div class="galeria"></div></div>
@@ -71,7 +83,7 @@ footer a { color:#f0d36c; font-weight:bold; font-size:1.1em; }
   <div class="categoria" id="yerbas"><h3>Otras Yerbas</h3><div class="galeria"></div></div>
 </section>
 <section class="bloque-ventas" id="obras-venta">
-  <h2>Obras a pedido</h2>
+  <h2>Obras a la venta</h2>
   <div class="galeria-ventas"></div>
 </section>
 <div id="lightbox" onclick="this.style.display='none'"><img src="" alt="Ampliación"></div>
