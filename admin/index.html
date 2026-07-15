@@ -1,28 +1,251 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Panel de Administración</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <style>
-      /* MAGIA PARA EL CELULAR: Hace el botón de arrastrar gigante */
-      [data-rbd-drag-handle-context-id] {
-        padding: 20px !important;
-        transform: scale(1.8) !important;
-        transform-origin: left center;
-        background-color: #e0e0e0 !important;
-        border-radius: 8px !important;
-        margin-right: 15px !important;
-      }
-      
-      /* Le da más aire a cada foto para que sea fácil moverlas */
-      [data-rbd-draggable-context-id] {
-        margin-bottom: 20px !important;
-      }
-    </style>
-  </head>
-  <body>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  </body>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fe de Arte - Fileteado Porteño y Cartelería</title>
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playwright+Deutschland+Grundschrift+Guides&display=swap" rel="stylesheet">
+
+<style>
+body { margin:0; font-family: 'Roboto', sans-serif; overflow-x:hidden; }
+h1 { font-family: 'Great Vibes', cursive; margin:0; }
+h2 { font-family: 'Great Vibes', cursive; margin:0; }
+h3 { font-family: 'Playwright Deutschland Grundschrift Guides', cursive; margin:0; }
+a { color: inherit; text-decoration:none; }
+nav#mini-menu, .galeria-ventas .info p, form input, form select, form textarea, form button { font-family: 'Roboto', sans-serif; }
+header { background:#fff9e6; padding:40px 20px; text-align:center; }
+header h1 { font-size:3.5em; }
+header h2 { font-size:1.0em; margin-top:5px; color:#333; font-family:'Roboto', sans-serif; }
+nav#mini-menu { display:flex; justify-content:center; background:#fff; border-top:3px solid #d4a017; border-bottom:3px solid #d4a017; padding:10px 40px; gap:40px; }
+nav#mini-menu a { font-weight:bold; }
+.intro { background:#800000; color:#fff; padding:40px 20px; text-align:center; }
+.intro p { max-width:600px; margin:auto; font-size:1.2em; }
+.bloque-trabajos { background:#0a1f44; color:#fff; padding:30px 0; }
+.bloque-trabajos h2 { text-align:center; font-size:2.5em; margin-bottom:20px; }
+.categoria { margin-bottom:60px; text-align:center; }
+.categoria h3 { font-size:2em; margin-bottom:10px; color:#f0d36c; position:relative; }
+.categoria:not(:last-child) { border-bottom: 1px solid #d4a017; padding-bottom: 30px; margin-bottom: 30px; }
+.galeria { display:flex; overflow-x:auto; scroll-snap-type: x mandatory; gap:10px; padding:10px; }
+.galeria img { height:400px; object-fit:cover; scroll-snap-align:start; cursor:pointer; flex-shrink:0; width:auto; }
+.boton-cotizar { background:#d4a017; color:#000; font-weight:bold; padding:10px 25px; border:none; border-radius:5px; cursor:pointer; margin-top:20px; transition:0.3s; }
+.boton-cotizar:hover { background:#f0d36c; }
+#lightbox { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); display:none; justify-content:center; align-items:center; z-index:1000; }
+#lightbox img { max-width:90%; max-height:90%; }
+.bloque-ventas { background:#000; color:#fff; padding:40px 20px; }
+.bloque-ventas h2 { font-size:3em; text-align:center; margin-bottom:10px; }
+.bloque-ventas p.subtitulo { text-align:center; font-size:1.2em; margin-bottom:30px; }
+.galeria-ventas { display:flex; overflow-x:auto; gap:15px; padding:10px; }
+.venta-item { min-width:250px; flex-shrink:0; background:#111; color:#fff; border-radius:8px; overflow:hidden; text-align:center; cursor:pointer; display:flex; flex-direction:column; }
+.venta-item img { width:100%; height:250px; object-fit:cover; }
+.venta-item .info { padding:10px; display:flex; flex-direction:column; gap:5px; }
+.venta-item .info .precio { color:#d4a017; font-weight:bold; }
+.venta-item .info .boton-cotizar { margin-top:auto; }
+.bloque-contacto { background:#fff9e6; padding:60px 20px; }
+.bloque-contacto h2 { font-size:2.5em; text-align:center; margin-bottom:30px; }
+form { max-width:600px; margin:auto; display:flex; flex-direction:column; gap:15px; }
+form .dos-campos { display:flex; gap:10px; flex-wrap:wrap; }
+form input, form select, form textarea { padding:10px; font-size:1em; width:100%; border:2px solid #d4a017; border-radius:5px; box-sizing:border-box; }
+form button { padding:12px; font-size:1em; background:#0a1f44; color:#fff; border:none; border-radius:5px; cursor:pointer; }
+.boton-whatsapp { display:inline-block; background:#25d366; color:white; font-weight:bold; padding:12px 25px; border-radius:8px; text-decoration:none; font-size:1.1em; margin:20px auto 0; text-align:center; transition:0.3s; }
+.boton-whatsapp:hover { background:#1ebe5c; }
+footer { background:#0a1f44; color:#fff; text-align:center; padding:20px; font-family:'Great Vibes', cursive; font-size:1.2em; }
+footer a { color:#f0d36c; font-weight:bold; font-size:1.1em; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Fe de Arte</h1>
+  <h2>Fileteado porteño y Cartelería</h2>
+</header>
+
+<nav id="mini-menu">
+  <a href="#mis-trabajos">Mis Trabajos</a>
+  <a href="#obras-venta">Obras a la venta</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<section class="intro">
+  <p>Cartelería pintada a mano, letras a pincel y filetes sobre cualquier superficie. Identidad tradicional a través de un arte popular con mas de 100 años en las calles de Buenos Aires y el mundo.</p>
+</section>
+
+<section class="bloque-trabajos" id="mis-trabajos">
+  <h2 style="font-size:3.0em">Mis Trabajos</h2>
+  <div class="categoria" id="madera">
+    <h3>Madera</h3><div class="galeria"></div>
+    <button class="boton-cotizar" onclick="scrollToContact()">Cotizá tu idea</button>
+  </div>
+  <div class="categoria" id="chapa">
+    <h3>Chapa</h3><div class="galeria"></div>
+    <button class="boton-cotizar" onclick="scrollToContact()">Cotizá tu idea</button>
+  </div>
+  <div class="categoria" id="vidrio">
+    <h3>Vidrio</h3><div class="galeria"></div>
+    <button class="boton-cotizar" onclick="scrollToContact()">Cotizá tu idea</button>
+  </div>
+  <div class="categoria" id="pared">
+    <h3>Pared</h3><div class="galeria"></div>
+    <button class="boton-cotizar" onclick="scrollToContact()">Cotizá tu idea</button>
+  </div>
+  <div class="categoria" id="yerbas">
+    <h3>Otras Yerbas</h3><div class="galeria"></div>
+    <button class="boton-cotizar" onclick="scrollToContact()">Cotizá tu idea</button>
+  </div>
+</section>
+
+<section class="bloque-ventas" id="obras-venta">
+  <h2>Obras a la venta</h2>
+  <p class="subtitulo">Envios a todo el 🌎</p>
+  <div class="galeria-ventas"></div>
+</section>
+
+<div id="lightbox" onclick="this.style.display='none'">
+  <img src="" alt="Ampliación">
+</div>
+
+<section class="bloque-contacto" id="contacto">
+  <h2 style="font-size:3.5em">Contacto</h2>
+  <form name="contacto" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="contacto">
+    <input type="text" name="nombre" placeholder="Nombre*" required>
+    <input type="text" name="email" placeholder="Email o celular*" required>
+    <select name="soporte">
+      <option value="">Tipo de soporte</option>
+      <option>Chapa</option><option>Vidrio</option><option>Madera</option><option>Pared</option><option>Otras Yerbas</option>
+    </select>
+    <div class="dos-campos">
+      <input type="number" name="ancho" placeholder="Ancho (cm)">
+      <input type="number" name="alto" placeholder="Alto (cm)">
+    </div>
+    <textarea name="idea" placeholder="Resumen de la idea"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+  <div style="text-align:center;">
+    <a href="https://wa.me/5547991760068" target="_blank" class="boton-whatsapp">O consultá por WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <p style="font-size: 1.5em">Del barrio de Boedo para el mundo</p>
+  <p style="font-size: 2em"><a href="https://www.instagram.com/fedearte/" target="_blank">@fedearte</a></p>
+</footer>
+
+<script>
+function scrollToContact() { document.getElementById("contacto").scrollIntoView({ behavior: "smooth" }); }
+
+(function(){
+  const userLang = navigator.language || navigator.userLanguage;
+  if(userLang.startsWith('pt')){
+    document.querySelector('html').lang = 'pt';
+    document.querySelector('header h2').textContent = "Fileteado porteño e Cartelaria";
+    document.querySelector('.intro p').textContent = "Cartelaria pintada à mão, letras a pincel e filetes sobre qualquer superfície. Identidade tradicional através de uma arte popular com mais de 100 anos nas ruas de Buenos Aires e do mundo.";
+    document.querySelector('#mini-menu a[href="#mis-trabajos"]').textContent = "Meus Trabalhos";
+    document.querySelector('#mini-menu a[href="#obras-venta"]').textContent = "Obras à venda";
+    document.querySelector('#mini-menu a[href="#contacto"]').textContent = "Contato";
+    document.querySelector('#madera h3').textContent = "Madeira";
+    document.querySelector('#chapa h3').textContent = "Chapa";
+    document.querySelector('#vidrio h3').textContent = "Vidro";
+    document.querySelector('#pared h3').textContent = "Parede";
+    document.querySelector('#yerbas h3').textContent = "Outras Ervas";
+    document.querySelector('#obras-venta .subtitulo').textContent = "Envios para todo o 🌎";
+    document.querySelector('#contacto h2').textContent = "Contato";
+    document.querySelector('form [name="soporte"] option[value=""]').textContent = "Tipo de suporte";
+    const opciones = ['Chapa','Vidro','Madeira','Parede','Outras Ervas'];
+    document.querySelectorAll('form [name="soporte"] option:not([value=""])').forEach((opt,i)=>{opt.textContent=opciones[i];});
+    document.querySelector('form [name="nombre"]').placeholder = "Nome*";
+    document.querySelector('form [name="email"]').placeholder = "Email ou celular*";
+    document.querySelector('form [name="ancho"]').placeholder = "Largura (cm)";
+    document.querySelector('form [name="alto"]').placeholder = "Altura (cm)";
+    document.querySelector('form [name="idea"]').placeholder = "Resumo da ideia";
+    document.querySelector('form button').textContent = "Enviar";
+    document.querySelector('.boton-whatsapp').textContent = "Ou consulte pelo WhatsApp";
+  }
+})();
+
+async function cargarCategoria(nombreJson, categoriaId = null) {
+  const categoria = categoriaId || nombreJson.replace('1','');
+  try {
+    const res = await fetch(`${nombreJson}.json`);
+    const data = await res.json();
+    const galeria = document.querySelector(`#${categoria} .galeria`);
+    galeria.innerHTML = '';
+    
+    // Acá está la magia para que ordene por el número que le pusiste
+    let imagenesOrdenadas = data.imagenes || [];
+    imagenesOrdenadas.sort((a, b) => {
+      let posA = a.orden !== undefined && a.orden !== null && a.orden !== "" ? Number(a.orden) : 999;
+      let posB = b.orden !== undefined && b.orden !== null && b.orden !== "" ? Number(b.orden) : 999;
+      return posA - posB;
+    });
+
+    imagenesOrdenadas.forEach(imgObj => {
+      const img = document.createElement('img');
+      img.src = imgObj.thumb;
+      img.alt = categoria;
+      img.addEventListener('click', () => {
+        const lb = document.querySelector('#lightbox');
+        lb.querySelector('img').src = imgObj.full;
+        lb.style.display = 'flex';
+      });
+      galeria.appendChild(img);
+    });
+  } catch(e){}
+}
+['madera1','chapa1','vidrio1','pared1','yerbas1'].forEach(nombre => cargarCategoria(nombre));
+
+async function cargarVentas(){
+  try {
+    const res = await fetch(`ventas.json`);
+    const data = await res.json();
+    const galeria = document.querySelector('.galeria-ventas');
+    galeria.innerHTML = '';
+    
+    let obrasOrdenadas = data.obras || [];
+    obrasOrdenadas.sort((a, b) => {
+      let posA = a.orden !== undefined && a.orden !== null && a.orden !== "" ? Number(a.orden) : 999;
+      let posB = b.orden !== undefined && b.orden !== null && b.orden !== "" ? Number(b.orden) : 999;
+      return posA - posB;
+    });
+
+    obrasOrdenadas.forEach(obra => {
+      const item = document.createElement('div');
+      item.className = 'venta-item';
+      const mensajeWhats = encodeURIComponent(`Hola! Me interesó el *${obra.titulo}*, quiero saber métodos de pago y envío.`);
+      const img = document.createElement('img');
+      img.src = obra.thumb;
+      img.alt = obra.titulo;
+      img.addEventListener('click', (e)=>{
+        e.stopPropagation();
+        const lb = document.querySelector('#lightbox');
+        lb.querySelector('img').src = obra.full;
+        lb.style.display='flex';
+      });
+      item.appendChild(img);
+      const info = document.createElement('div');
+      info.className = 'info';
+      info.innerHTML = `<p>${obra.titulo}</p><p><b>Fileteado porteño</b> sobre:<br>${obra.descripcion}</p><p class="precio">💰 ${obra.precio}</p>`;
+      const boton = document.createElement('a');
+      boton.href = `https://wa.me/5547991760068?text=${mensajeWhats}`;
+      boton.target = "_blank"; boton.className = "boton-cotizar"; boton.textContent = "Comprar";
+      info.appendChild(boton); item.appendChild(info); galeria.appendChild(item);
+    });
+  } catch(e){}
+}
+cargarVentas();
+
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", user => {
+    if (!user) {
+      window.netlifyIdentity.on("login", () => {
+        document.location.href = "/admin/";
+      });
+    }
+  });
+}
+</script>
+</body>
 </html>
