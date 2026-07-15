@@ -1,0 +1,24 @@
+{
+  "obras": [
+            {
+      "titulo": "Letrero 21x15cm personalizado",
+      "descripcion": "Fileteado porteño en MDF 6mm",
+      "precio": "120 Rs",
+      "imagen": "https://res.cloudinary.com/dcqfopg66/image/upload/v1760011700/IMG_20250525_175024_242_dsiaio.jpg"
+    },
+
+    {
+      "titulo": "Letrero 30x21cm personalizado",
+      "descripcion": "Fileteado porteño en MDF 6mm",
+      "precio": "220 Rs",
+      "imagen": "https://res.cloudinary.com/dcqfopg66/image/upload/v1760011707/IMG_20250514_200727_244_augjtx.jpg"
+    },
+        {
+      "titulo": "Letrero 42x30cm personalizado",
+      "descripcion": "Fileteado porteño en MDF 6mm",
+      "precio": "350 Rs",
+      "imagen": "https://res.cloudinary.com/dcqfopg66/image/upload/v1760011723/IMG_20250725_213545_777_zpjzim.jpg"
+    }
+
+  ]
+}

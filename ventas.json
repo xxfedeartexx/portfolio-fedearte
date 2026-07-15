@@ -1,0 +1,25 @@
+{
+  "obras": [
+    {
+      "titulo": "Cartel personalizado 21x15cm",
+      "descripcion": "MDF 6mm o Chapa Galvanizada",
+      "precio": "Madera: 120 Rs / Chapa: 180 Rs",
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1760011700/IMG_20250525_175024_242_dsiaio.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1760011700/IMG_20250525_175024_242_dsiaio.jpg"
+    },
+    {
+      "titulo": "Cartel personalizado 30x21cm",
+      "descripcion": "MDF 6mm o Chapa Galvanizada",
+      "precio": "Madera: 220 Rs / Chapa: 280 Rs",
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1760011707/IMG_20250514_200727_244_augjtx.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1760011707/IMG_20250514_200727_244_augjtx.jpg"
+    },
+    {
+      "titulo": "Cartel personalizado 42x30cm",
+      "descripcion": "MDF 6mm o Chapa Galvanizada",
+      "precio": "Madera: 350 Rs / Chapa: 420 Rs",
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1760011723/IMG_20250725_213545_777_zpjzim.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1760011723/IMG_20250725_213545_777_zpjzim.jpg"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "imagenes": [
+    {
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1759980748/Screenshot_20251009-002626_pn05kp.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1759980748/Screenshot_20251009-002626_pn05kp.jpg"
+    },
+    {
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1759980748/Screenshot_20251009-002701_f6rxb5.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1759980748/Screenshot_20251009-002701_f6rxb5.jpg"
+    },
+    {
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1759980750/1759980334015_aij7b9.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1759980750/1759980334015_aij7b9.jpg"
+    },
+    {
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1759980754/Screenshot_20251009-001742_gqozdc.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1759980754/Screenshot_20251009-001742_gqozdc.jpg"
+    }
+  ]
+}

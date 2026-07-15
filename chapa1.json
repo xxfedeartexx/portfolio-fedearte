@@ -1,0 +1,32 @@
+{
+  "imagenes": [
+    {
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1759939829/20220503_222840_xmfjru.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1759939829/20220503_222840_xmfjru.jpg"
+    },
+    {
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1759939871/20230224102445_IMG_6029_xzlx2u.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1759939871/20230224102445_IMG_6029_xzlx2u.jpg"
+    },
+    {
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1759939822/20220506_114803_c3taga.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1759939822/20220506_114803_c3taga.jpg"
+    },
+    {
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1759939963/20220530_172909_f6nnom.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1759939963/20220530_172909_f6nnom.jpg"
+    },
+    {
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1759979452/Screenshot_20251009-000616_pfxya4.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1759979452/Screenshot_20251009-000616_pfxya4.jpg"
+    },
+    {
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1759979451/Screenshot_20251009-000659_t3fahd.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1759979451/Screenshot_20251009-000659_t3fahd.jpg"
+    },
+    {
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1759980761/1759980122457_n7o2j9.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1759980761/1759980122457_n7o2j9.jpg"
+    }
+  ]
+}
