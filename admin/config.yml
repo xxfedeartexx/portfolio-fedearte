@@ -20,6 +20,7 @@ collections:
             label: "Obras"
             widget: "list"
             fields:
+              - {label: "Posición (Ej: 1, 2... dejar vacío para el final)", name: "orden", widget: "number", value_type: "int", required: false}
               - {label: "Título", name: "titulo", widget: "string"}
               - {label: "Descripción", name: "descripcion", widget: "text"}
               - {label: "Precio", name: "precio", widget: "string"}
@@ -34,6 +35,7 @@ collections:
             label: "Imágenes"
             widget: "list"
             fields:
+              - {label: "Posición (Ej: 1, 2...)", name: "orden", widget: "number", value_type: "int", required: false}
               - {label: "Foto Miniatura", name: "thumb", widget: "image"}
               - {label: "Foto Ampliada", name: "full", widget: "image"}
           
@@ -45,6 +47,7 @@ collections:
             label: "Imágenes"
             widget: "list"
             fields:
+              - {label: "Posición (Ej: 1, 2...)", name: "orden", widget: "number", value_type: "int", required: false}
               - {label: "Foto Miniatura", name: "thumb", widget: "image"}
               - {label: "Foto Ampliada", name: "full", widget: "image"}
           
@@ -56,6 +59,7 @@ collections:
             label: "Imágenes"
             widget: "list"
             fields:
+              - {label: "Posición (Ej: 1, 2...)", name: "orden", widget: "number", value_type: "int", required: false}
               - {label: "Foto Miniatura", name: "thumb", widget: "image"}
               - {label: "Foto Ampliada", name: "full", widget: "image"}
 
@@ -67,6 +71,7 @@ collections:
             label: "Imágenes"
             widget: "list"
             fields:
+              - {label: "Posición (Ej: 1, 2...)", name: "orden", widget: "number", value_type: "int", required: false}
               - {label: "Foto Miniatura", name: "thumb", widget: "image"}
               - {label: "Foto Ampliada", name: "full", widget: "image"}
 
@@ -78,5 +83,6 @@ collections:
             label: "Imágenes"
             widget: "list"
             fields:
+              - {label: "Posición (Ej: 1, 2...)", name: "orden", widget: "number", value_type: "int", required: false}
               - {label: "Foto Miniatura", name: "thumb", widget: "image"}
               - {label: "Foto Ampliada", name: "full", widget: "image"}
