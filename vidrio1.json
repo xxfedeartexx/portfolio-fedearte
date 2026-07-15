@@ -44,6 +44,11 @@
       "full": "https://res.cloudinary.com/dcqfopg66/image/upload/v1784085315/IMG_2356_klmnpw.jpg",
       "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/v1784085315/IMG_2356_klmnpw.jpg",
       "orden": 1
+    },
+    {
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/v1784087190/IMG_2380_ckc1f7.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/v1784087190/IMG_2380_ckc1f7.jpg",
+      "orden": 2
     }
   ]
 }
