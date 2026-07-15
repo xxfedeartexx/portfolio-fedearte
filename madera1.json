@@ -3,7 +3,7 @@
     {
       "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1759962156/Screenshot_20230322-225511_xcc6hp.jpg",
       "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1759962156/Screenshot_20230322-225511_xcc6hp.jpg",
-      "orden": 2
+      "orden": 4
     },
     {
       "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1759979397/IMG-20250418-WA0054_q71ztj.jpg",
@@ -82,6 +82,11 @@
       "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/v1784089282/IMG_2419_rv7tvw.jpg",
       "full": "https://res.cloudinary.com/dcqfopg66/image/upload/v1784089282/IMG_2419_rv7tvw.jpg",
       "orden": 3
+    },
+    {
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/v1784092238/IMG-20241126-WA0064_t4xd9s.jpg",
+      "orden": 2,
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/v1784092238/IMG-20241126-WA0064_t4xd9s.jpg"
     }
   ]
 }
