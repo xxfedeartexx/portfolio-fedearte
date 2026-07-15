@@ -5,16 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fe de Arte - Fileteado Porteño y Cartelería</title>
 
-<!-- Script para el Panel de Control -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-<!-- Fuentes -->
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playwright+Deutschland+Grundschrift+Guides&display=swap" rel="stylesheet">
 
 <style>
-/* Tipografías */
 body { margin:0; font-family: 'Roboto', sans-serif; overflow-x:hidden; }
 h1 { font-family: 'Great Vibes', cursive; margin:0; }
 h2 { font-family: 'Great Vibes', cursive; margin:0; }
@@ -176,7 +173,16 @@ async function cargarCategoria(nombreJson, categoriaId = null) {
     const data = await res.json();
     const galeria = document.querySelector(`#${categoria} .galeria`);
     galeria.innerHTML = '';
-    data.imagenes.forEach(imgObj => {
+    
+    // Acá está la magia para que ordene por el número que le pusiste
+    let imagenesOrdenadas = data.imagenes || [];
+    imagenesOrdenadas.sort((a, b) => {
+      let posA = a.orden !== undefined && a.orden !== null && a.orden !== "" ? Number(a.orden) : 999;
+      let posB = b.orden !== undefined && b.orden !== null && b.orden !== "" ? Number(b.orden) : 999;
+      return posA - posB;
+    });
+
+    imagenesOrdenadas.forEach(imgObj => {
       const img = document.createElement('img');
       img.src = imgObj.thumb;
       img.alt = categoria;
@@ -197,7 +203,15 @@ async function cargarVentas(){
     const data = await res.json();
     const galeria = document.querySelector('.galeria-ventas');
     galeria.innerHTML = '';
-    data.obras.forEach(obra => {
+    
+    let obrasOrdenadas = data.obras || [];
+    obrasOrdenadas.sort((a, b) => {
+      let posA = a.orden !== undefined && a.orden !== null && a.orden !== "" ? Number(a.orden) : 999;
+      let posB = b.orden !== undefined && b.orden !== null && b.orden !== "" ? Number(b.orden) : 999;
+      return posA - posB;
+    });
+
+    obrasOrdenadas.forEach(obra => {
       const item = document.createElement('div');
       item.className = 'venta-item';
       const mensajeWhats = encodeURIComponent(`Hola! Me interesó el *${obra.titulo}*, quiero saber métodos de pago y envío.`);
@@ -223,7 +237,6 @@ async function cargarVentas(){
 }
 cargarVentas();
 
-// Script para que funcione el login
 if (window.netlifyIdentity) {
   window.netlifyIdentity.on("init", user => {
     if (!user) {
