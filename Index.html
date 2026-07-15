@@ -7,31 +7,16 @@
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Playwright+Deutschland+Grundschrift+Guides&display=swap" rel="stylesheet">
 <style>
 body { margin:0; font-family: 'Roboto', sans-serif; overflow-x:hidden; }
 h1 { font-family: 'Great Vibes', cursive; margin:0; }
 h2 { font-family: 'Great Vibes', cursive; margin:0; }
-h3 { font-family: 'Playwright Deutschland Grundschrift Guides', cursive; margin:0; }
-a { color: inherit; text-decoration:none; }
-nav#mini-menu, .galeria-ventas .info p, form input, form select, form textarea, form button { font-family: 'Roboto', sans-serif; }
 header { background:#fff9e6; padding:40px 20px; text-align:center; }
-.logo-header { 
-    max-width: 90%; 
-    width: 450px; 
-    height: auto; 
-    display: block; 
-    margin: 0 auto;
-    image-rendering: -webkit-optimize-contrast; 
-    image-rendering: crisp-edges;
-    margin-bottom: 20px;
-}
+.logo-header { max-width: 90%; width: 450px; height: auto; display: block; margin: 0 auto; margin-bottom: 20px; }
 header h2 { font-size:1.2em; margin-top:5px; color:#333; font-family:'Roboto', sans-serif; }
 nav#mini-menu { display:flex; justify-content:center; background:#fff; border-top:3px solid #d4a017; border-bottom:3px solid #d4a017; padding:10px 40px; gap:40px; }
 .intro { background:#800000; color:#fff; padding:40px 20px; text-align:center; }
-.intro p { max-width:600px; margin:auto; font-size:1.2em; }
 .bloque-trabajos { background:#0a1f44; color:#fff; padding:30px 0; }
-.bloque-trabajos h2 { text-align:center; font-size:2.5em; margin-bottom:20px; }
 .categoria { margin-bottom:60px; text-align:center; }
 .categoria h3 { font-size:2em; margin-bottom:10px; color:#f0d36c; }
 .galeria { display:flex; overflow-x:auto; scroll-snap-type: x mandatory; gap:10px; padding:10px; }
@@ -75,7 +60,8 @@ form input, form select, form textarea { padding:10px; border:2px solid #d4a017;
 <div id="lightbox" onclick="this.style.display='none'"><img src="" alt="Ampliación"></div>
 <section class="bloque-contacto" id="contacto">
   <h2 style="font-size:3.5em">Contacto</h2>
-  <form id="form-contacto" action="https://formspree.io/f/mqazqjje" method="POST">
+  <form name="contacto" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="contacto">
     <input type="text" name="nombre" placeholder="Nombre*" required>
     <input type="email" name="email" placeholder="Email*" required>
     <select name="soporte"><option value="">Tipo de soporte</option><option>Chapa</option><option>Vidrio</option><option>Madera</option><option>Pared</option><option>Otras Yerbas</option></select>
@@ -84,7 +70,7 @@ form input, form select, form textarea { padding:10px; border:2px solid #d4a017;
   </form>
 </section>
 <footer>
-  <p style="font-size: 1.5em; font-family:'Great Vibes', cursive;">Del barrio de Boedo para el mundo</p>
+  <p style="font-size: 1.5em; font-family:'Great Vibes', cursive; text-align:center;">Del barrio de Boedo para el mundo</p>
   <img src="https://res.cloudinary.com/dcqfopg66/image/upload/q_auto,f_auto/v1784116618/1784116603798_rtjs4t.png" alt="Logo" class="footer-logo">
 </footer>
 <script>
@@ -112,6 +98,16 @@ async function cargarData(nombreJson, contenedorId, esVenta = false) {
 }
 ['madera1','chapa1','vidrio1','pared1','yerbas1'].forEach((n,i) => cargarData(n, n.replace('1','')));
 cargarData('ventas', '', true);
+
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", user => {
+    if (!user) {
+      window.netlifyIdentity.on("login", () => {
+        document.location.href = "/admin/";
+      });
+    }
+  });
+}
 </script>
 </body>
 </html>
