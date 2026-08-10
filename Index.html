@@ -30,7 +30,27 @@ header h2 { font-size:1.2em; margin-top:5px; color:#333; font-family:'Roboto', s
 nav#mini-menu { display:flex; justify-content:center; background:#fff; border-top:3px solid #d4a017; border-bottom:3px solid #d4a017; padding:10px 40px; gap:40px; }
 nav#mini-menu a { font-weight:bold; color: #333; }
 .intro { background:#800000; color:#fff; padding:40px 20px; text-align:center; }
-.intro p { max-width:600px; margin:auto; font-size:1.2em; }
+.intro-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 950px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.intro-adorno {
+    max-height: 50px;
+    width: auto;
+    display: block;
+}
+.intro p { 
+    max-width: 600px; 
+    margin: 0; 
+    font-size: 1.2em; 
+    flex: 1;
+    min-width: 280px;
+}
 .bloque-trabajos { background:#0a1f44; color:#fff; padding:30px 0; }
 .bloque-trabajos h2 { text-align:center; font-size:2.5em; margin-bottom:20px; }
 .categoria { margin-bottom:60px; text-align:center; }
@@ -73,7 +93,11 @@ footer { background:#0a1f44; color:#fff; text-align:center; padding:20px; }
 </nav>
 
 <section class="intro">
-  <p>Cartelería pintada a mano, letras a pincel y filetes sobre cualquier superfície. Identidad tradicional a través de un arte popular con mas de 100 años en las calles de Buenos Aires y el mundo.</p>
+  <div class="intro-contenedor">
+    <img src="https://res.cloudinary.com/dcqfopg66/image/upload/v1786400478/1786400419100_ufwftb.jpg" alt="Adorno izquierdo" class="intro-adorno">
+    <p>Cartelería pintada a mano, letras a pincel y filetes sobre cualquier superficie. Identidad tradicional a través de un arte popular con mas de 100 años en las calles de Buenos Aires y el mundo.</p>
+    <img src="https://res.cloudinary.com/dcqfopg66/image/upload/v1786400474/1786400432217_cccpt0.jpg" alt="Adorno derecho" class="intro-adorno">
+  </div>
 </section>
 
 <section class="bloque-trabajos" id="mis-trabajos">
@@ -107,6 +131,11 @@ footer { background:#0a1f44; color:#fff; text-align:center; padding:20px; }
     <h3>Otras Yerbas</h3>
     <div class="galeria"></div>
     <button class="boton-cotizar" onclick="scrollToContact()">Cotizá tu idea</button>
+  </div>
+
+  <!-- Adorno de flores al final del bloque de trabajos -->
+  <div style="text-align: center; margin-top: 40px; padding: 0 20px;">
+    <img src="https://res.cloudinary.com/dcqfopg66/image/upload/v1786400986/1786400938459_kutawb.jpg" alt="Flores decorativas" style="max-width: 320px; width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
   </div>
 </section>
 
