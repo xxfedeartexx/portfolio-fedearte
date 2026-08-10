@@ -77,7 +77,7 @@ form { max-width:600px; margin:auto; display:flex; flex-direction:column; gap:15
 form input, form select, form textarea { padding:10px; font-size:1em; width:100%; border:2px solid #d4a017; border-radius:5px; box-sizing:border-box; }
 form button { padding:12px; font-size:1em; background:#0a1f44; color:#fff; border:none; border-radius:5px; cursor:pointer; }
 footer { background:#0a1f44; color:#fff; text-align:center; padding:20px; }
-.footer-logo { max-width: 200px; height: auto; display: block; margin: 10px auto; }
+.footer-logo { max-width: 200px; height: auto; display: block; margin: 0 auto; }
 </style>
 </head>
 <body>
@@ -150,19 +150,18 @@ footer { background:#0a1f44; color:#fff; text-align:center; padding:20px; }
 
 <section class="bloque-contacto" id="contacto">
   <h2 style="font-size:3.5em">Contacto</h2>
-  <form id="form-contacto" action="https://formspree.io/f/mqazqjje" method="POST">
-    <input type="text" name="nombre" placeholder="Nombre*" required>
-    <input type="text" name="email" placeholder="Email o celular*" required>
-    <select name="soporte">
+  <form id="form-contacto">
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre*" required>
+    <select id="soporte" name="soporte">
       <option value="">Tipo de soporte</option>
       <option>Chapa</option><option>Vidrio</option><option>Madera</option><option>Pared</option><option>Otras Yerbas</option>
     </select>
     <div class="dos-campos" style="display:flex; gap:10px;">
-      <input type="number" name="ancho" placeholder="Ancho (cm)">
-      <input type="number" name="alto" placeholder="Alto (cm)">
+      <input type="number" id="ancho" name="ancho" placeholder="Ancho (cm)">
+      <input type="number" id="alto" name="alto" placeholder="Alto (cm)">
     </div>
-    <textarea name="idea" placeholder="Resumen de la idea" style="resize:vertical;"></textarea>
-    <button type="submit">Enviar</button>
+    <textarea id="idea" name="idea" placeholder="Resumen de la idea" style="resize:vertical;"></textarea>
+    <button type="submit">Enviar por WhatsApp</button>
   </form>
 </section>
 
@@ -176,28 +175,24 @@ function scrollToContact() {
   document.getElementById("contacto").scrollIntoView({ behavior: "smooth" }); 
 }
 
-// Envío del formulario sin recargar y directo al mail vía Formspree
 document.getElementById("form-contacto").addEventListener("submit", function(event) {
   event.preventDefault();
-  const formulario = event.target;
-  const formData = new FormData(formulario);
   
-  fetch(formulario.action, {
-    method: "POST",
-    body: formData,
-    headers: { 'Accept': 'application/json' }
-  })
-  .then(response => {
-    if (response.ok) {
-      alert("¡Mensaje enviado con éxito! Me voy a poner en contacto a la brevedad.");
-      formulario.reset();
-    } else {
-      alert("Hubo un error al enviar. Por favor, escribime directamente por WhatsApp.");
-    }
-  })
-  .catch(() => {
-    alert("Hubo un error al enviar. Por favor, escribime directamente por WhatsApp.");
-  });
+  const nombre = document.getElementById("nombre").value;
+  const soporte = document.getElementById("soporte").value || "cualquier superficie";
+  const ancho = document.getElementById("ancho").value || "X";
+  const alto = document.getElementById("alto").value || "X";
+  const idea = document.getElementById("idea").value;
+
+  let texto = `Hola soy ${nombre}, quiero saber cuanto sale un trabajo de ${ancho}x${alto} sobre ${soporte}.`;
+  if (idea) {
+    texto += ` Idea: ${idea}`;
+  }
+
+  const telefono = "5547991760068";
+  const urlWhatsApp = `https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`;
+  
+  window.open(urlWhatsApp, "_blank");
 });
 
 async function cargarData(nombreJson, contenedorId, esVenta = false) {
