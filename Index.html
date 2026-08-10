@@ -7,30 +7,56 @@
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playwright+Deutschland+Grundschrift+Guides&display=swap" rel="stylesheet">
 <style>
 body { margin:0; font-family: 'Roboto', sans-serif; overflow-x:hidden; }
 h1 { font-family: 'Great Vibes', cursive; margin:0; }
 h2 { font-family: 'Great Vibes', cursive; margin:0; }
+h3 { font-family: 'Playwright Deutschland Grundschrift Guides', cursive; margin:0; }
+a { color: inherit; text-decoration:none; }
+nav#mini-menu, .galeria-ventas .info p, form input, form select, form textarea, form button { font-family: 'Roboto', sans-serif; }
 header { background:#fff9e6; padding:40px 20px; text-align:center; }
-.logo-header { max-width: 90%; width: 450px; height: auto; display: block; margin: 0 auto; margin-bottom: 20px; }
+.logo-header { 
+    max-width: 90%; 
+    width: 450px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto;
+    image-rendering: -webkit-optimize-contrast; 
+    image-rendering: crisp-edges;
+    margin-bottom: 20px;
+}
 header h2 { font-size:1.2em; margin-top:5px; color:#333; font-family:'Roboto', sans-serif; }
 nav#mini-menu { display:flex; justify-content:center; background:#fff; border-top:3px solid #d4a017; border-bottom:3px solid #d4a017; padding:10px 40px; gap:40px; }
+nav#mini-menu a { font-weight:bold; color: #333; }
 .intro { background:#800000; color:#fff; padding:40px 20px; text-align:center; }
+.intro p { max-width:600px; margin:auto; font-size:1.2em; }
 .bloque-trabajos { background:#0a1f44; color:#fff; padding:30px 0; }
+.bloque-trabajos h2 { text-align:center; font-size:2.5em; margin-bottom:20px; }
 .categoria { margin-bottom:60px; text-align:center; }
-.categoria h3 { font-size:2em; margin-bottom:10px; color:#f0d36c; }
+.categoria h3 { font-size:2em; margin-bottom:10px; color:#f0d36c; position:relative; }
+.categoria:not(:last-child) { border-bottom: 1px solid #d4a017; padding-bottom: 30px; margin-bottom: 30px; }
 .galeria { display:flex; overflow-x:auto; scroll-snap-type: x mandatory; gap:10px; padding:10px; }
 .galeria img { height:400px; object-fit:cover; scroll-snap-align:start; cursor:pointer; flex-shrink:0; width:auto; }
-.boton-cotizar { background:#d4a017; color:#000; font-weight:bold; padding:10px 25px; border:none; border-radius:5px; cursor:pointer; margin-top:20px; }
+.boton-cotizar { background:#d4a017; color:#000; font-weight:bold; padding:10px 25px; border:none; border-radius:5px; cursor:pointer; margin-top:20px; transition:0.3s; display:inline-block; text-align:center; }
+.boton-cotizar:hover { background:#f0d36c; }
 #lightbox { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); display:none; justify-content:center; align-items:center; z-index:1000; }
 #lightbox img { max-width:90%; max-height:90%; }
 .bloque-ventas { background:#000; color:#fff; padding:40px 20px; }
+.bloque-ventas h2 { font-size:3em; text-align:center; margin-bottom:10px; }
+.bloque-ventas p.subtitulo { text-align:center; font-size:1.2em; margin-bottom:30px; }
 .galeria-ventas { display:flex; overflow-x:auto; gap:15px; padding:10px; }
-.venta-item { min-width:250px; flex-shrink:0; background:#111; color:#fff; border-radius:8px; overflow:hidden; text-align:center; cursor:pointer; }
-.venta-item img { width:100%; height:250px; object-fit:cover; }
+.venta-item { min-width:250px; flex-shrink:0; background:#111; color:#fff; border-radius:8px; overflow:hidden; text-align:center; display:flex; flex-direction:column; }
+.venta-item img { width:100%; height:250px; object-fit:cover; cursor:pointer; }
+.venta-item .info { padding:10px; display:flex; flex-direction:column; gap:5px; flex-grow:1; }
+.venta-item .info .precio { color:#d4a017; font-weight:bold; }
+.venta-item .info .boton-cotizar { margin-top:auto; }
 .bloque-contacto { background:#fff9e6; padding:60px 20px; }
+.bloque-contacto h2 { font-size:2.5em; text-align:center; margin-bottom:30px; }
 form { max-width:600px; margin:auto; display:flex; flex-direction:column; gap:15px; }
-form input, form select, form textarea { padding:10px; border:2px solid #d4a017; border-radius:5px; }
+form input, form select, form textarea { padding:10px; font-size:1em; width:100%; border:2px solid #d4a017; border-radius:5px; box-sizing:border-box; }
+form button { padding:12px; font-size:1em; background:#0a1f44; color:#fff; border:none; border-radius:5px; cursor:pointer; }
+footer { background:#0a1f44; color:#fff; text-align:center; padding:20px; }
 .footer-logo { max-width: 200px; height: auto; display: block; margin: 10px auto; }
 </style>
 </head>
@@ -39,41 +65,90 @@ form input, form select, form textarea { padding:10px; border:2px solid #d4a017;
   <img src="https://res.cloudinary.com/dcqfopg66/image/upload/q_auto,f_auto/v1784115823/1784115775454_qmcqmu.png" alt="Fe de Arte" class="logo-header">
   <h2>Fileteado porteño y Cartelería</h2>
 </header>
+
 <nav id="mini-menu">
   <a href="#mis-trabajos">Mis Trabajos</a>
   <a href="#obras-venta">Obras a la venta</a>
   <a href="#contacto">Contacto</a>
 </nav>
-<section class="intro"><p>Cartelería pintada a mano, letras a pincel y filetes sobre cualquier superficie. Identidad tradicional a través de un arte popular con mas de 100 años en las calles de Buenos Aires y el mundo.</p></section>
+
+<section class="intro">
+  <p>Cartelería pintada a mano, letras a pincel y filetes sobre cualquier superfície. Identidad tradicional a través de un arte popular con mas de 100 años en las calles de Buenos Aires y el mundo.</p>
+</section>
+
 <section class="bloque-trabajos" id="mis-trabajos">
   <h2 style="font-size:3.0em">Mis Trabajos</h2>
-  <div class="categoria" id="madera"><h3>Madera</h3><div class="galeria"></div></div>
-  <div class="categoria" id="chapa"><h3>Chapa</h3><div class="galeria"></div></div>
-  <div class="categoria" id="vidrio"><h3>Vidrio</h3><div class="galeria"></div></div>
-  <div class="categoria" id="pared"><h3>Pared</h3><div class="galeria"></div></div>
-  <div class="categoria" id="yerbas"><h3>Otras Yerbas</h3><div class="galeria"></div></div>
+  
+  <div class="categoria" id="madera">
+    <h3>Madera</h3>
+    <div class="galeria"></div>
+    <button class="boton-cotizar" onclick="scrollToContact()">Cotizá tu idea</button>
+  </div>
+
+  <div class="categoria" id="chapa">
+    <h3>Chapa</h3>
+    <div class="galeria"></div>
+    <button class="boton-cotizar" onclick="scrollToContact()">Cotizá tu idea</button>
+  </div>
+
+  <div class="categoria" id="vidrio">
+    <h3>Vidrio</h3>
+    <div class="galeria"></div>
+    <button class="boton-cotizar" onclick="scrollToContact()">Cotizá tu idea</button>
+  </div>
+
+  <div class="categoria" id="pared">
+    <h3>Pared</h3>
+    <div class="galeria"></div>
+    <button class="boton-cotizar" onclick="scrollToContact()">Cotizá tu idea</button>
+  </div>
+
+  <div class="categoria" id="yerbas">
+    <h3>Otras Yerbas</h3>
+    <div class="galeria"></div>
+    <button class="boton-cotizar" onclick="scrollToContact()">Cotizá tu idea</button>
+  </div>
 </section>
+
 <section class="bloque-ventas" id="obras-venta">
   <h2>Obras a la venta</h2>
+  <p class="subtitulo">Envios a todo el 🌎</p>
   <div class="galeria-ventas"></div>
 </section>
-<div id="lightbox" onclick="this.style.display='none'"><img src="" alt="Ampliación"></div>
+
+<div id="lightbox" onclick="this.style.display='none'">
+  <img src="" alt="Ampliación">
+</div>
+
 <section class="bloque-contacto" id="contacto">
   <h2 style="font-size:3.5em">Contacto</h2>
   <form name="contacto" method="POST" data-netlify="true">
     <input type="hidden" name="form-name" value="contacto">
     <input type="text" name="nombre" placeholder="Nombre*" required>
-    <input type="email" name="email" placeholder="Email*" required>
-    <select name="soporte"><option value="">Tipo de soporte</option><option>Chapa</option><option>Vidrio</option><option>Madera</option><option>Pared</option><option>Otras Yerbas</option></select>
-    <textarea name="idea" placeholder="Resumen de la idea"></textarea>
+    <input type="text" name="email" placeholder="Email o celular*" required>
+    <select name="soporte">
+      <option value="">Tipo de soporte</option>
+      <option>Chapa</option><option>Vidrio</option><option>Madera</option><option>Pared</option><option>Otras Yerbas</option>
+    </select>
+    <div class="dos-campos" style="display:flex; gap:10px;">
+      <input type="number" name="ancho" placeholder="Ancho (cm)">
+      <input type="number" name="alto" placeholder="Alto (cm)">
+    </div>
+    <textarea name="idea" placeholder="Resumen de la idea" style="resize:vertical;"></textarea>
     <button type="submit">Enviar</button>
   </form>
 </section>
+
 <footer>
-  <p style="font-size: 1.5em; font-family:'Great Vibes', cursive; text-align:center;">Del barrio de Boedo para el mundo</p>
+  <p style="font-size: 1.5em; font-family:'Great Vibes', cursive;">Del barrio de Boedo para el mundo</p>
   <img src="https://res.cloudinary.com/dcqfopg66/image/upload/q_auto,f_auto/v1784116618/1784116603798_rtjs4t.png" alt="Logo" class="footer-logo">
 </footer>
+
 <script>
+function scrollToContact() { 
+  document.getElementById("contacto").scrollIntoView({ behavior: "smooth" }); 
+}
+
 async function cargarData(nombreJson, contenedorId, esVenta = false) {
   try {
     const res = await fetch(`${nombreJson}.json`);
@@ -82,21 +157,36 @@ async function cargarData(nombreJson, contenedorId, esVenta = false) {
     items.sort((a, b) => (Number(a.orden||999) - Number(b.orden||999)));
     const galeria = document.querySelector(esVenta ? '.galeria-ventas' : `#${contenedorId} .galeria`);
     galeria.innerHTML = '';
+    
     items.forEach(item => {
       const div = document.createElement('div');
       if(esVenta) {
         div.className = 'venta-item';
-        div.innerHTML = `<img src="${item.thumb}" onclick="document.querySelector('#lightbox img').src='${item.full}'; document.querySelector('#lightbox').style.display='flex';"><div class="info"><p>${item.titulo}</p></div>`;
+        const mensajeWhats = encodeURIComponent(`Hola! Me interesó el *${item.titulo}*, quiero saber métodos de pago y envío.`);
+        div.innerHTML = `
+          <img src="${item.thumb}" alt="${item.titulo}" onclick="document.querySelector('#lightbox img').src='${item.full}'; document.querySelector('#lightbox').style.display='flex';">
+          <div class="info">
+            <p style="margin:0; font-weight:bold;">${item.titulo}</p>
+            <p style="margin:0; font-size:0.9em;"><b>Fileteado porteño</b> sobre:<br>${item.descripcion || ''}</p>
+            <p class="precio">💰 ${item.precio}</p>
+            <a href="https://wa.me/5547991760068?text=${mensajeWhats}" target="_blank" class="boton-cotizar">Comprar</a>
+          </div>`;
       } else {
-        const img = document.createElement('img'); img.src = item.thumb;
-        img.onclick = () => { document.querySelector('#lightbox img').src = item.full; document.querySelector('#lightbox').style.display='flex'; };
+        const img = document.createElement('img'); 
+        img.src = item.thumb;
+        img.alt = contenedorId;
+        img.onclick = () => { 
+          document.querySelector('#lightbox img').src = item.full; 
+          document.querySelector('#lightbox').style.display='flex'; 
+        };
         div.appendChild(img);
       }
       galeria.appendChild(div);
     });
   } catch(e){}
 }
-['madera1','chapa1','vidrio1','pared1','yerbas1'].forEach((n,i) => cargarData(n, n.replace('1','')));
+
+['madera1','chapa1','vidrio1','pared1','yerbas1'].forEach(nombre => cargarData(nombre, nombre.replace('1','')));
 cargarData('ventas', '', true);
 
 if (window.netlifyIdentity) {
