@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playwright+Deutschland+Grundschrift+Guides&display=swap" rel="stylesheet">
 <style>
-body { margin:0; font-family: 'Roboto', sans-serif; overflow-x:hidden; }
+body { margin:0; font-family: 'Roboto', sans-serif; overflow-x:hidden; background: #0a1f44; }
 h1 { font-family: 'Great Vibes', cursive; margin:0; }
 h2 { font-family: 'Great Vibes', cursive; margin:0; }
 h3 { font-family: 'Playwright Deutschland Grundschrift Guides', cursive; margin:0; }
@@ -51,33 +51,86 @@ nav#mini-menu a { font-weight:bold; color: #333; }
     flex: 1;
     min-width: 280px;
 }
-.bloque-trabajos { background:#0a1f44; color:#fff; padding:30px 0; }
-.bloque-trabajos h2 { text-align:center; font-size:2.5em; margin-bottom:20px; }
-.categoria { margin-bottom:60px; text-align:center; }
-.categoria h3 { font-size:2em; margin-bottom:10px; color:#f0d36c; position:relative; }
-.categoria:not(:last-child) { border-bottom: 1px solid #d4a017; padding-bottom: 30px; margin-bottom: 30px; }
-.galeria { display:flex; overflow-x:auto; scroll-snap-type: x mandatory; gap:10px; padding:10px; }
-.galeria img { height:400px; object-fit:cover; scroll-snap-align:start; cursor:pointer; flex-shrink:0; width:auto; }
-.boton-cotizar { background:#d4a017; color:#000; font-weight:bold; padding:10px 25px; border:none; border-radius:5px; cursor:pointer; margin-top:20px; transition:0.3s; display:inline-block; text-align:center; }
-.boton-cotizar:hover { background:#f0d36c; }
+.intro-obra-nueva {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 25px auto 0 auto;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
+}
+.bloque-trabajos { background:#0a1f44; color:#fff; padding:40px 0; }
+.bloque-trabajos h2 { text-align:center; font-size:3em; margin-bottom:30px; color:#fff; }
+
+.categoria { 
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(212, 160, 23, 0.25);
+    border-radius: 16px;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    padding: 30px 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+.categoria:hover {
+    border-color: rgba(212, 160, 23, 0.5);
+}
+.categoria h3 { 
+    font-size: 2.2em; 
+    margin-bottom: 20px; 
+    color: #f0d36c; 
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+.galeria { display:flex; overflow-x:auto; scroll-snap-type: x mandatory; gap:15px; padding:10px; scrollbar-width: thin; scrollbar-color: #d4a017 #0a1f44; }
+.galeria img { height:400px; object-fit:cover; scroll-snap-align:start; cursor:pointer; flex-shrink:0; width:auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); transition: transform 0.3s; }
+.galeria img:hover { transform: scale(1.02); }
+
+.boton-cotizar { 
+    background: linear-gradient(135deg, #d4a017, #f0d36c); 
+    color: #0a1f44; 
+    font-weight: bold; 
+    padding: 12px 35px; 
+    border: none; 
+    border-radius: 30px; 
+    cursor: pointer; 
+    margin-top: 25px; 
+    transition: all 0.3s ease; 
+    display: inline-block; 
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(212, 160, 23, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.95em;
+}
+.boton-cotizar:hover { 
+    background: linear-gradient(135deg, #f0d36c, #ffe885); 
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(212, 160, 23, 0.6);
+}
+
 #lightbox { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); display:none; justify-content:center; align-items:center; z-index:1000; }
-#lightbox img { max-width:90%; max-height:90%; }
-.bloque-ventas { background:#000; color:#fff; padding:40px 20px; }
+#lightbox img { max-width:90%; max-height:90%; border-radius: 6px; }
+
+.bloque-ventas { background:#000; color:#fff; padding:50px 20px; }
 .bloque-ventas h2 { font-size:3em; text-align:center; margin-bottom:10px; }
 .bloque-ventas p.subtitulo { text-align:center; font-size:1.2em; margin-bottom:30px; }
-.galeria-ventas { display:flex; overflow-x:auto; gap:15px; padding:10px; }
-.venta-item { min-width:250px; flex-shrink:0; background:#111; color:#fff; border-radius:8px; overflow:hidden; text-align:center; display:flex; flex-direction:column; }
+.galeria-ventas { display:flex; overflow-x:auto; gap:20px; padding:10px; }
+.venta-item { min-width:260px; flex-shrink:0; background:#111; color:#fff; border-radius:12px; overflow:hidden; text-align:center; display:flex; flex-direction:column; border: 1px solid #333; }
 .venta-item img { width:100%; height:250px; object-fit:cover; cursor:pointer; }
-.venta-item .info { padding:10px; display:flex; flex-direction:column; gap:5px; flex-grow:1; }
-.venta-item .info .precio { color:#d4a017; font-weight:bold; }
-.venta-item .info .boton-cotizar { margin-top:auto; }
+.venta-item .info { padding:15px; display:flex; flex-direction:column; gap:8px; flex-grow:1; }
+.venta-item .info .precio { color:#d4a017; font-weight:bold; font-size: 1.1em; }
+.venta-item .info .boton-cotizar { margin-top:auto; padding: 10px 20px; }
+
 .bloque-contacto { background:#fff9e6; padding:60px 20px; }
-.bloque-contacto h2 { font-size:2.5em; text-align:center; margin-bottom:30px; }
+.bloque-contacto h2 { font-size:3.5em; text-align:center; margin-bottom:30px; color: #0a1f44; }
 form { max-width:600px; margin:auto; display:flex; flex-direction:column; gap:15px; }
-form input, form select, form textarea { padding:10px; font-size:1em; width:100%; border:2px solid #d4a017; border-radius:5px; box-sizing:border-box; }
-form button { padding:12px; font-size:1em; background:#0a1f44; color:#fff; border:none; border-radius:5px; cursor:pointer; }
-footer { background:#0a1f44; color:#fff; text-align:center; padding:20px; }
-.footer-logo { max-width: 200px; height: auto; display: block; margin: 0 auto; }
+form input, form select, form textarea { padding:12px; font-size:1em; width:100%; border:2px solid #d4a017; border-radius:8px; box-sizing:border-box; background: #fff; }
+form button { padding:14px; font-size:1.1em; background:#0a1f44; color:#fff; border:none; border-radius:8px; cursor:pointer; font-weight: bold; transition: background 0.3s; }
+form button:hover { background: #15326b; }
+
+footer { background:#0a1f44; color:#fff; text-align:center; padding:30px 20px; border-top: 1px solid rgba(212,160,23,0.3); }
+.footer-logo { max-width: 200px; height: auto; display: block; margin: 15px auto 0 auto; }
 </style>
 </head>
 <body>
@@ -98,6 +151,7 @@ footer { background:#0a1f44; color:#fff; text-align:center; padding:20px; }
     <p>Cartelería pintada a mano, letras a pincel y filetes sobre cualquier superficie. Identidad tradicional a través de un arte popular con mas de 100 años en las calles de Buenos Aires y el mundo.</p>
     <img src="https://res.cloudinary.com/dcqfopg66/image/upload/v1786400474/1786400432217_cccpt0.jpg" alt="Adorno derecho" class="intro-adorno">
   </div>
+  <img src="https://res.cloudinary.com/dcqfopg66/image/upload/q_auto,f_auto/v1788407604/IMG_2836_1_pjtoah.png" alt="Obra de fileteado" class="intro-obra-nueva">
 </section>
 
 <section class="bloque-trabajos" id="mis-trabajos">
@@ -133,8 +187,8 @@ footer { background:#0a1f44; color:#fff; text-align:center; padding:20px; }
     <button class="boton-cotizar" onclick="scrollToContact()">Cotizá tu idea</button>
   </div>
 
-  <div style="text-align: center; margin-top: 40px; padding: 0 20px;">
-    <img src="https://res.cloudinary.com/dcqfopg66/image/upload/v1786400986/1786400938459_kutawb.jpg" alt="Flores decorativas" style="max-width: 320px; width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
+  <div style="text-align: center; margin-top: 50px; padding: 0 20px;">
+    <img src="https://res.cloudinary.com/dcqfopg66/image/upload/v1786400986/1786400938459_kutawb.jpg" alt="Flores decorativas" style="max-width: 320px; width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 8px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));">
   </div>
 </section>
 
@@ -212,8 +266,8 @@ async function cargarData(nombreJson, contenedorId, esVenta = false) {
         div.innerHTML = `
           <img src="${item.thumb}" alt="${item.titulo}" onclick="document.querySelector('#lightbox img').src='${item.full}'; document.querySelector('#lightbox').style.display='flex';">
           <div class="info">
-            <p style="margin:0; font-weight:bold;">${item.titulo}</p>
-            <p style="margin:0; font-size:0.9em;"><b>Fileteado porteño</b> sobre:<br>${item.descripcion || ''}</p>
+            <p style="margin:0; font-weight:bold; font-size: 1.1em;">${item.titulo}</p>
+            <p style="margin:0; font-size:0.9em; opacity: 0.9;"><b>Fileteado porteño</b> sobre:<br>${item.descripcion || ''}</p>
             <p class="precio">💰 ${item.precio}</p>
             <a href="https://wa.me/5547991760068?text=${mensajeWhats}" target="_blank" class="boton-cotizar">Comprar</a>
           </div>`;
