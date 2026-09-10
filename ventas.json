@@ -2,24 +2,45 @@
   "obras": [
     {
       "titulo": "Casa da Fofoca",
-      "descripcion": "MDF 6mm o Chapa Galvanizada",
+      "descripcion": "42x30cm / MDF 6mm",
       "precio": "350 Rs",
       "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/v1789077093/1000201266_iixpc2.jpg",
       "full": "https://res.cloudinary.com/dcqfopg66/image/upload/v1789077093/1000201266_iixpc2.jpg"
     },
     {
-      "titulo": "Cartel personalizado 30x21cm",
-      "descripcion": "MDF 6mm o Chapa Galvanizada",
-      "precio": "-",
-      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1760011707/IMG_20250514_200727_244_augjtx.jpg",
-      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1760011707/IMG_20250514_200727_244_augjtx.jpg"
+      "titulo": "Bom Dia",
+      "descripcion": "30x21cm / MDF 6mm",
+      "precio": "200 Rs",
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/v1789077093/1000201270_ymmiju.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/v1789077093/1000201270_ymmiju.jpg"
     },
     {
-      "titulo": "Cartel personalizado 42x30cm",
-      "descripcion": "MDF 6mm o Chapa Galvanizada",
-      "precio": "-",
-      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1760011723/IMG_20250725_213545_777_zpjzim.jpg",
-      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1760011723/IMG_20250725_213545_777_zpjzim.jpg"
+      "titulo": "Foda-se",
+      "descripcion": "21x15cm / MDF 6mm",
+      "precio": "120 Rs",
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/v1789077092/1789076649804_lh8rmx.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/v1789077092/1789076649804_lh8rmx.jpg"
+    },
+    {
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/v1789077092/1000201269_o7lzxo.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/v1789077092/1000201269_o7lzxo.jpg",
+      "titulo": "Lar Doce Lar",
+      "descripcion": "15x21cm / MDF 6mm",
+      "precio": "120 Rs"
+    },
+    {
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/v1789077087/1789076504388_hudph9.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/v1789077087/1789076504388_hudph9.jpg",
+      "titulo": "Casa de Praia",
+      "descripcion": "30x21cm / MDF 6mm",
+      "precio": "200 Rs"
+    },
+    {
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/v1789077085/1000201272_ds9knd.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/v1789077085/1000201272_ds9knd.jpg",
+      "titulo": "Aqui e só Amor",
+      "descripcion": "15x21cm / MDF 6mm",
+      "precio": "120 Rs"
     }
   ]
 }
