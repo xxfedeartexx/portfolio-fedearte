@@ -82,7 +82,7 @@ nav#mini-menu a:hover {
     height: auto;
     display: block;
     margin: 20px auto 0 auto;
-    clip-path: inset(4px 0 0 0); /* Elimina cualquier línea o residuo superior */
+    clip-path: inset(4px 0 0 0);
 }
 .bloque-trabajos { background:#0a1f44; color:#fff; padding:40px 0; }
 .bloque-trabajos h2 { text-align:center; font-size:3em; margin-bottom:30px; color:#fff; }
@@ -292,7 +292,7 @@ async function cargarData(nombreJson, contenedorId, esVenta = false) {
           <img src="${item.thumb}" alt="${item.titulo}" onclick="document.querySelector('#lightbox img').src='${item.full}'; document.querySelector('#lightbox').style.display='flex';">
           <div class="info">
             <p style="margin:0; font-weight:bold; font-size: 1.1em;">${item.titulo}</p>
-            <p style="margin:0; font-size:0.9em; opacity: 0.9;"><b>Fileteado porteño</b> sobre:<br>${item.descripcion || ''}</p>
+            <p style="margin:0; font-size:0.9em; opacity: 0.9;">${item.descripcion || ''}</p>
             <p class="precio">💰 ${item.precio}</p>
             <a href="https://wa.me/5547991760068?text=${mensajeWhats}" target="_blank" class="boton-cotizar">Comprar</a>
           </div>`;
