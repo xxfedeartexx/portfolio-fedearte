@@ -27,7 +27,7 @@ header { background:#fff9e6; padding:40px 20px; text-align:center; }
     margin-bottom: 20px;
 }
 header h2 { font-size:1.2em; margin-top:5px; color:#333; font-family:'Roboto', sans-serif; }
-nav#mini-menu { display:flex; justify-content:center; background:#fff; border-top:3px solid #d4a017; border-bottom:3px solid #d4a017; padding:10px 40px; gap:40px; }
+nav#mini-menu { display:flex; justify-content:center; background:#fff; border-top:3px solid #d4a017; border-bottom:3px solid #d4a017; padding:10px 40px; gap:40px; flex-wrap: wrap; }
 nav#mini-menu a { font-weight:bold; color: #333; }
 .intro { background:#89141D; color:#fff; padding:40px 20px; text-align:center; }
 .intro-contenedor {
@@ -57,7 +57,6 @@ nav#mini-menu a { font-weight:bold; color: #333; }
     height: auto;
     display: block;
     margin: 25px auto 0 auto;
-    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
 }
 .bloque-trabajos { background:#0a1f44; color:#fff; padding:40px 0; }
 .bloque-trabajos h2 { text-align:center; font-size:3em; margin-bottom:30px; color:#fff; }
@@ -70,6 +69,7 @@ nav#mini-menu a { font-weight:bold; color: #333; }
     margin: 0 auto 40px auto;
     padding: 30px 15px;
     box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    text-align: center;
     transition: transform 0.3s ease;
 }
 .categoria:hover {
@@ -79,10 +79,9 @@ nav#mini-menu a { font-weight:bold; color: #333; }
     font-size: 2.2em; 
     margin-bottom: 20px; 
     color: #f0d36c; 
-    text-align: center;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
-.galeria { display:flex; overflow-x:auto; scroll-snap-type: x mandatory; gap:15px; padding:10px; scrollbar-width: thin; scrollbar-color: #d4a017 #0a1f44; }
+.galeria { display:flex; overflow-x:auto; scroll-snap-type: x mandatory; gap:15px; padding:10px; scrollbar-width: thin; scrollbar-color: #d4a017 #0a1f44; text-align: left; }
 .galeria img { height:400px; object-fit:cover; scroll-snap-align:start; cursor:pointer; flex-shrink:0; width:auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); transition: transform 0.3s; }
 .galeria img:hover { transform: scale(1.02); }
 
@@ -141,8 +140,8 @@ footer { background:#0a1f44; color:#fff; text-align:center; padding:30px 20px; b
 
 <nav id="mini-menu">
   <a href="#mis-trabajos">Mis Trabajos</a>
-  <a href="#obras-venta">Obras a la venta</a>
-  <a href="#contacto">Contacto</a>
+  <a href="#obras-venta">Obras disponibles</a>
+  <a href="#contacto">Cotizá tu idea</a>
 </nav>
 
 <section class="intro">
@@ -151,7 +150,7 @@ footer { background:#0a1f44; color:#fff; text-align:center; padding:30px 20px; b
     <p>Cartelería pintada a mano, letras a pincel y filetes sobre cualquier superficie. Identidad tradicional a través de un arte popular con mas de 100 años en las calles de Buenos Aires y el mundo.</p>
     <img src="https://res.cloudinary.com/dcqfopg66/image/upload/v1786400474/1786400432217_cccpt0.jpg" alt="Adorno derecho" class="intro-adorno">
   </div>
-  <img src="https://res.cloudinary.com/dcqfopg66/image/upload/q_auto,f_auto/v1788407604/IMG_2836_1_pjtoah.png" alt="Obra de fileteado" class="intro-obra-nueva">
+  <img src="https://res.cloudinary.com/dcqfopg66/image/upload/v1788407604/IMG_2836_1_pjtoah.png" alt="Obra de fileteado" class="intro-obra-nueva">
 </section>
 
 <section class="bloque-trabajos" id="mis-trabajos">
@@ -188,12 +187,12 @@ footer { background:#0a1f44; color:#fff; text-align:center; padding:30px 20px; b
   </div>
 
   <div style="text-align: center; margin-top: 50px; padding: 0 20px;">
-    <img src="https://res.cloudinary.com/dcqfopg66/image/upload/v1786400986/1786400938459_kutawb.jpg" alt="Flores decorativas" style="max-width: 320px; width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 8px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));">
+    <img src="https://res.cloudinary.com/dcqfopg66/image/upload/v1786400986/1786400938459_kutawb.jpg" alt="Flores decorativas" style="max-width: 320px; width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 8px;">
   </div>
 </section>
 
 <section class="bloque-ventas" id="obras-venta">
-  <h2>Obras a la venta</h2>
+  <h2>Obras disponibles</h2>
   <p class="subtitulo">Envios a todo el 🌎</p>
   <div class="galeria-ventas"></div>
 </section>
@@ -203,7 +202,7 @@ footer { background:#0a1f44; color:#fff; text-align:center; padding:30px 20px; b
 </div>
 
 <section class="bloque-contacto" id="contacto">
-  <h2 style="font-size:3.5em">Contacto</h2>
+  <h2 style="font-size:3.5em">Cotizá tu idea</h2>
   <form id="form-contacto">
     <input type="text" id="nombre" name="nombre" placeholder="Nombre*" required>
     <select id="soporte" name="soporte">
