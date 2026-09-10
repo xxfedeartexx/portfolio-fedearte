@@ -15,6 +15,11 @@
     {
       "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto,w_800,h_800,c_fill/v1759980754/Screenshot_20251009-001742_gqozdc.jpg",
       "full": "https://res.cloudinary.com/dcqfopg66/image/upload/f_auto,q_auto/v1759980754/Screenshot_20251009-001742_gqozdc.jpg"
+    },
+    {
+      "thumb": "https://res.cloudinary.com/dcqfopg66/image/upload/v1789073629/IMG_3064_npvvww.jpg",
+      "full": "https://res.cloudinary.com/dcqfopg66/image/upload/v1789073629/IMG_3064_npvvww.jpg",
+      "orden": 3
     }
   ]
 }
